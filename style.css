@@ -1,1 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  color: white;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070://unsplash.https://images.unsplash.com/photo-1524252500348-1bb07b83f3be?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070/photos/Fs-bcmsV-hA);
+  background-size: cover;
+  /*разобраться как сделать, чтобы перестало смещаться*/
+}
+.nav-bar{
+  height: 50px;
+  width: auto;
+  background-color: rgba(0,0,0,1);
+  display: flex;
+}
+.nav-list {
+  margin: auto 0 auto 0;
+  width: auto;
+  font-size: 20px;
+}
+.nav-list li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0 5px 0 5px;
+}
+.nav-list a{
+  text-decoration: none;
+}
+.nav-list li:hover{
+  /*это кринж, если создать только нижнее подчеркивание, то всё скачет
+  border-top: 1px transparent solid; 
+  border-bottom: 1px white solid;*/
+  text-decoration: underline;
+}
+.header{
+  margin: 20px;
+  width: auto;
+  background-color: rgba(0,0,0,0.75);
+}
+.quote{
+  font-family: Garamond;
+  padding: 10px 10px 0 10px;
+  font-weight:lighter;
+  font-size: 28px;
+}
+.cite {
+  font-family: Garamond;
+  padding: 10px 10px 10px 10px;
+  font-size: 28px;
+  text-align: end;
+  font-style:normal;
+}
+.content {
+  width:auto;
+  margin: 20px;
+  display: flex;
+}
+
+.logo {
+  font-family: monospace;
+  font-weight: 100;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* КАРТОЧКИ ДОЛЖНЫ ПЕРЕБИРАТЬСЯ НА ДРУГУЮ СТРОЧКУ*/
+.card{
+  display: inline-block;
+  margin: auto;
+  width: 220px;
+  height: 380px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10px;
+}
+.card-image{
+  display: block;
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-name{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+.card-text{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: justify;
+}
+.info {
+  height: 75px;
+  width: 100%;
+  background-color: rgba(0,0,0,1);
+  display: flex;
+}
+.info-list{
+  list-style: none;
+  margin-left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
