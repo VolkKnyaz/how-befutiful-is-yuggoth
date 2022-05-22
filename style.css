@@ -5,13 +5,8 @@
   font-family: monospace;
   color: white;
 }
-body {
-  background-image: url(https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070://unsplash.https://images.unsplash.com/photo-1524252500348-1bb07b83f3be?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070/photos/Fs-bcmsV-hA);
-  background-size: cover;
-  /*разобраться как сделать, чтобы перестало смещаться*/
-}
 .nav-bar{
-  height: 50px;
+  height: 40px;
   width: auto;
   background-color: rgba(0,0,0,1);
   display: flex;
@@ -19,15 +14,16 @@ body {
 .nav-list {
   margin: auto 0 auto 0;
   width: auto;
-  font-size: 20px;
+  font-size: 16px;
 }
 .nav-list li{
   list-style: none;
   display: inline-block;
-  margin-left: 10px;
-  padding: 0 5px 0 5px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .nav-list a{
+  font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
 }
 .nav-list li:hover{
@@ -37,9 +33,18 @@ body {
   text-decoration: underline;
 }
 .header{
-  margin: 20px;
+  background-image: url(assets/img-intro.jpg);
+  background-size: cover;
+  background-position: center;
   width: auto;
-  background-color: rgba(0,0,0,0.75);
+  height: 206px;
+}
+.quote-block {
+  position: absolute;
+  top: 65px;
+  right: 50px;
+  width: 600px;
+  background-color: rgba(0,0,0,0.25);
 }
 .quote{
   font-family: Garamond;
@@ -55,60 +60,97 @@ body {
   font-style:normal;
 }
 .content {
-  width:auto;
-  margin: 20px;
+  border-top: 40px black solid;
+  background-image: url(assets/img-back.jpg);
+  background-size: cover;
+  width: auto;
   display: flex;
 }
-
-.logo {
-  font-family: monospace;
-  font-weight: 100;
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  display: block;
+.left-content {
+  width: 30%;
 }
-
+.intro-block {
+  margin: 0 50px 0 50px;
+  background-color: rgba(0,0,0,0.5);
+  width: auto;
+  padding: 15px 10px 100px 10px;
+}
+.intro-logo {
+  color: white;
+  padding-bottom: 10px;
+  font-family: Serif;
+  font-weight: 100;
+  font-size: 24px;
+}
+.intro-text{
+  font-family: monospace;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.right-content {
+  width: 70%;
+}
+.card-block{
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 15px 10px 49px 10px;
+  background-color: rgba(240,240,240,0.25);
+}
+.right-logo {
+  text-align: center;
+  color: black;
+  font-family: Serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+.content-card{
+  padding-top: 25px;
+  display: flex;
+}
 /* КАРТОЧКИ ДОЛЖНЫ ПЕРЕБИРАТЬСЯ НА ДРУГУЮ СТРОЧКУ*/
 .card{
   display: inline-block;
   margin: auto;
-  width: 220px;
-  height: 380px;
+  width: 180px;
+  height: 270px;
   padding: 10px;
   background-color: rgba(0,0,0,0.8);
   border-radius: 10px;
 }
+.card:hover{
+  border: 1px solid white;
+}
 .card-image{
   display: block;
-  width: 200px;
-  height: 250px;
+  margin: 0 auto 0 auto;
+  width: 75%;
+  height: 55%;
   object-fit: cover;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .card-name{
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 18px;
   text-align: center;
-  padding: 5px 0 5px 0;
+  padding: 5px 0 10px 0;
 }
 .card-text{
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 14px;
   text-align: justify;
 }
 .info {
-  height: 75px;
+  height: 40px;
   width: 100%;
   background-color: rgba(0,0,0,1);
   display: flex;
 }
 .info-list{
   list-style: none;
-  margin-left: 15px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
+  display: flex;
+}
+.info-list li{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  margin: 0 20px 0 20px;
+  display: inline-block;
 }
 
