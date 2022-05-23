@@ -1,12 +1,17 @@
-let fearClick = Document.querySelector('.clickScarry');
-let back = Document.querySelector('.quote-block');
+let scarryText = document.querySelector('.clickScarry');
+let quoteBack = document.querySelector('.quote-block');
 
-const fearFunction = () => {
-  buttonScarry.addEventListener('mousedown',() => {
-  back.style.backgroundImage = 'url(assets/img-scary).jpg';
+const scarryBackChange = () => {
+  scarryText.addEventListener('mousedown',() => {
+    quoteBack.style.backgroundImage = 'url(assets/img-scarry.jpg)';
+    quoteBack.style.backgroundSize = 'cover';
+    quoteBack.style.backgroundPosition = '50% 25%';
   });
-  buttonScarry.addEventListener('mouseup',() => {
-  back.style.backgroundImage = null;
+  scarryText.addEventListener('mouseup',() => {
+    quoteBack.style.backgroundImage = null;
+    quoteBack.style.backgroundSize = null;
+    quoteBack.style.backgroundPosition = null;
   });
 };
-fearFunction();
+
+scarryBackChange();
