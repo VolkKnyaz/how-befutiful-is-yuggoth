@@ -6,7 +6,7 @@ const fearFunction = () => {
   back.style.backgroundImage = 'url(assets/img-scary).jpg';
   });
   buttonScarry.addEventListener('mouseup',() => {
-  back.style.backgroundImage = 'url(assets/img-intro).jpg';
+  back.style.backgroundImage = null;
   });
 };
 fearFunction();
