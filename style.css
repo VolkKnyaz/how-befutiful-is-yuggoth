@@ -27,9 +27,6 @@
   text-decoration: none;
 }
 .nav-list li:hover{
-  /*это кринж, если создать только нижнее подчеркивание, то всё скачет
-  border-top: 1px transparent solid; 
-  border-bottom: 1px white solid;*/
   text-decoration: underline;
 }
 .header{
@@ -58,6 +55,11 @@
   font-size: 28px;
   text-align: end;
   font-style:normal;
+}
+.clickScarry {
+  font-family: Garamond;
+  font-weight: bold;
+  text-decoration: none;
 }
 .content {
   border-top: 40px black solid;
