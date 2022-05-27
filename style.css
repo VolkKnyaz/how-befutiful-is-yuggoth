@@ -32,9 +32,9 @@
   background-size: cover;
   background-position: center;
   width: auto;
-  height: 197px;
+  height: 200px;
 }
-.quote-block {
+.quote-box {
   position: absolute;
   top: 65px;
   right: 50px;
@@ -54,7 +54,7 @@
   text-align: end;
   font-style:normal;
 }
-.clickScarry {
+.change-back-button {
   font-family: Garamond;
   font-weight: bold;
   text-decoration: none;
@@ -66,10 +66,10 @@
   width: auto;
   display: flex;
 }
-.left-content {
+.left-column {
   width: 30%;
 }
-.intro-block {
+.intro-box {
   margin: 0 50px 0 50px;
   background-color: rgba(0,0,0,0.5);
   width: 340px;
@@ -87,16 +87,15 @@
   padding-bottom: 5px;
   font-size: 14px;
 }
-.right-content {
+.right-column {
   width: 70%;
 }
-.card-block{
+.card-box {
   margin-left: 50px;
   margin-right: 50px;
-  padding: 15px 10px 49px 10px;
-  /*background-color: rgba(240,240,240,0.25);*/
+  padding: 15px 10px 50px 10px;
 }
-.right-logo-box{
+.card-logo-box{
   margin: auto;
   text-align: center;
   width:fit-content;
@@ -104,44 +103,46 @@
   border-radius: 5px;
   background-color: rgba(240,240,240,0.5);
 }
-.right-logo {
+.card-logo {
   color: black;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: 24px;
 }
-.content-card{
-  width: 1200px;
-  margin: 0 auto;
+.card-list-box {
+  width: 680px;
   padding-top: 15px;
   font-size: 0;
+  margin: auto;
 }
-/* КАРТОЧКИ ДОЛЖНЫ ПЕРЕБИРАТЬСЯ НА ДРУГУЮ СТРОЧКУ*/
-.card{
+.card {
+  vertical-align: middle;
+  margin-right: 25px;
+  margin-bottom: 25px;
   display: inline-block;
-  margin-right: 0;
   width: 210px;
   height: 350px;
   padding: 10px;
   background-color: rgba(0,0,0,0.8);
-  border-radius: 10px;
-}
-.new-character-card-image {
-  display: block;
-  margin: 0 auto 0 auto;
-  width: 75%;
-  height: 55%;
-  object-fit: contain;
-}
-.new-character-card-image:hover {
-  cursor: pointer;
+  border-radius: 5px;
 }
 .card-last {
-
-  margin: 0 0 0 0;
+  margin-right: 0;
 }
 .card:hover{
   border: 1px solid white;
+}
+.card-icon {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+  float: right;
+  cursor: pointer;
+  border: 1px transparent solid;
+  border-radius: 100%;
+}
+.card-icon:active {
+  border-color: white;
 }
 .card-image{
   display: block;
@@ -160,21 +161,72 @@
   font-size: 14px;
   text-align: justify;
 }
-.info {
+#card-add-image {
+  object-fit: contain;
+}
+#card-add-image:hover {
+  cursor: pointer;
+}
+.card-add-view {
+  width: auto;
+  display: contents;
+  transition: display 1s;
+}
+.card-add-data {
+  display: none;
+  width: auto;
+  transition: display 1s;
+}
+.card-add-data label {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.add-url, .add-name {
+  display: block;
+  margin-bottom: 15px;
+  color: black;
+  height: 30px;
+  width: 190px;
+}
+.add-text {
+  display: block;
+  margin-bottom: 30px;
+  color: black;
+  height: 90px;
+  width: 190px;
+}
+.add-submit {
+  display: block;
+  margin: auto;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: azure;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  content: 'Подтвердить';
+  cursor: pointer;
+}
+.foo-bar {
   height: 40px;
   width: 100%;
   background-color: rgba(0,0,0,1);
   display: flex;
 }
-.info-list{
+.author-info-list{
   list-style: none;
   margin: auto;
   display: flex;
 }
-.info-list li{
+.author-info-list li{
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   margin: 0 20px 0 20px;
-  display: inline-block;
 }
 
