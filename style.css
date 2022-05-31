@@ -124,13 +124,16 @@
   height: 350px;
   padding: 10px;
   background-color: rgba(0,0,0,0.8);
+  border: 2px solid transparent;
   border-radius: 5px;
 }
 .card-last {
   margin-right: 0;
 }
 .card:hover{
-  border: 1px solid white;
+  box-shadow: 5px 5px 15px grey, -5px -5px 15px grey;
+  /* border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s; */
 }
 .card-icon {
   height: 20px;
@@ -138,11 +141,16 @@
   padding: 2px;
   float: right;
   cursor: pointer;
-  border: 1px transparent solid;
-  border-radius: 100%;
+  border: 2px transparent solid;
+  border-radius: 20%;
+}
+.card-icon:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color .25s;
 }
 .card-icon:active {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s;
 }
 .card-image{
   display: block;
@@ -161,21 +169,29 @@
   font-size: 14px;
   text-align: justify;
 }
-#card-add-image {
+#card-add:hover {
+  cursor: pointer;
+}
+/*#card-add:active {
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s;
+}*/
+#card-add .card-image {
   object-fit: contain;
 }
-#card-add-image:hover {
-  cursor: pointer;
+#card-add .edit-icon {
+  display: none;
+}
+#card-add .del-icon {
+  display: none;
 }
 .card-add-view {
   width: auto;
   display: contents;
-  transition: display 1s;
 }
 .card-add-data {
   display: none;
   width: auto;
-  transition: display 1s;
 }
 .card-add-data label {
   display: block;
@@ -184,7 +200,6 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 .add-url, .add-name {
   display: block;
   margin-bottom: 15px;
@@ -205,13 +220,22 @@
   width: 120px;
   height: 30px;
   border-radius: 10px;
-  border: none;
+  border: solid 2px transparent;
   background-color: azure;
   color: black;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   content: 'Подтвердить';
   cursor: pointer;
+}
+.add-submit:hover {
+  background-color: rgb(200, 200, 200);
+  transition: background-color .25s;
+  cursor: pointer;
+}
+.add-submit:active {
+  border-color: rgba(0, 0, 0, 0.8);
+  transition: border .25s;
 }
 .foo-bar {
   height: 40px;

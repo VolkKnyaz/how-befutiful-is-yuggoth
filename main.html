@@ -4,6 +4,7 @@
 <head>
     <title>Call of Cthulhu Campaign Booklet</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#"> <!-- fix to stop showing favicon.ico error-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -52,33 +53,35 @@
                 </div>
                 <div class="card-list-box">
                     <div class="card">
-                        <img class='card-image' src="assets/img1.jpg" alt="img card1">
+                        <img class='card-image' src="assets/img1.jpg" alt="photo1">
                         <h2 class="card-name">Уильям Монтгомерри</h2>
                         <p class="card-text">Детектив. Описание персонажа. Выбери его!</p>
                     </div>
                     <div class="card">
-                        <img class='card-image' src="assets/img2.jpg" alt="img card1">
+                        <img class='card-image' src="assets/img2.jpg" alt="photo2">
                         <h2 class="card-name">Джордж Милтон Младший</h2>
                         <p class="card-text">Сын магната. Описание персонажа. Выбери его!</p>
                     </div>
                     <div class="card card-last">
-                        <img class='card-image' src="assets/img3.jpg" alt="img card1">
+                        <img class='card-image' src="assets/img3.jpg" alt="photo3">
                         <h2 class="card-name">Элизабет Торнвуд</h2>
                         <p class="card-text">Актриса. Описание персонажа. Выбери его!</p>
                     </div>
                     <div class="card">
-                        <img class='card-image' src="assets/img4.jpg" alt="img card1">
+                        <img class='card-image' src="assets/img4.jpg" alt="photo4">
                         <h2 class="card-name">Стивен Кларк</h2>
                         <p class="card-text">Врач-хирург. Описание персонажа. Выбери его!</p>
                     </div>
                     <div id="card-add" class="card">
                         <div class="card-add-view">
-                            <img id="card-add-image" class='card-image' src="assets/img-plus.png" alt="img card1">
-                            <h2 class="card-name">Новый персонаж</h2>
-                            <p class="card-text">Кто же займётся расследованием?</p>
+                            <img class="card-icon edit-icon" src="assets/icon-edit.png" alt="edit-icon">
+                            <img class='card-image' src="assets/img-plus.png" alt="img-add">
+                            <h2 class="card-name"></h2>
+                            <p class="card-text"></p>
                         </div>
-                        <form class="card-add-data">
+                        <div class="card-add-data">
                             <img class="card-icon exit-icon" src="assets/icon-x.jpg" alt="x-icon">
+                            <img class="card-icon del-icon" src="assets/icon-del.png" alt="del-icon">
                             <label for='url'>Фото персонажа</label>
                             <input class="add-url" name='url' type="text" placeholder="Ссылка">
                             <label for='name'>Имя персонажа</label>
@@ -86,7 +89,7 @@
                             <label for='text'>Описание персонажа</label>
                             <textarea class="add-text" name='text' placeholder="Я детектив и борюсь со злом"></textarea>
                             <input class="add-submit" type="submit" value="Подтвердить">
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
