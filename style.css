@@ -17,16 +17,14 @@
   font-size: 16px;
 }
 .nav-list li{
+  font-family: 'Courier New', Courier, monospace;
   list-style: none;
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
 }
-.nav-list a{
-  font-family: 'Courier New', Courier, monospace;
-  text-decoration: none;
-}
-.nav-list li:hover{
+.nav-list li:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 .header{
@@ -34,9 +32,9 @@
   background-size: cover;
   background-position: center;
   width: auto;
-  height: 206px;
+  height: 200px;
 }
-.quote-block {
+.quote-box {
   position: absolute;
   top: 65px;
   right: 50px;
@@ -56,7 +54,7 @@
   text-align: end;
   font-style:normal;
 }
-.clickScarry {
+.change-back-button {
   font-family: Garamond;
   font-weight: bold;
   text-decoration: none;
@@ -68,19 +66,19 @@
   width: auto;
   display: flex;
 }
-.left-content {
+.left-column {
   width: 30%;
 }
-.intro-block {
+.intro-box {
   margin: 0 50px 0 50px;
   background-color: rgba(0,0,0,0.5);
-  width: auto;
-  padding: 15px 10px 100px 10px;
+  width: 340px;
+  padding: 15px 10px 110px 10px;
 }
 .intro-logo {
   color: white;
   padding-bottom: 10px;
-  font-family: Serif;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 100;
   font-size: 24px;
 }
@@ -89,38 +87,70 @@
   padding-bottom: 5px;
   font-size: 14px;
 }
-.right-content {
+.right-column {
   width: 70%;
 }
-.card-block{
+.card-box {
   margin-left: 50px;
   margin-right: 50px;
-  padding: 15px 10px 49px 10px;
-  background-color: rgba(240,240,240,0.25);
+  padding: 15px 10px 50px 10px;
 }
-.right-logo {
+.card-logo-box{
+  margin: auto;
   text-align: center;
+  width:fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(240,240,240,0.5);
+}
+.card-logo {
   color: black;
-  font-family: Serif;
-  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   font-size: 24px;
 }
-.content-card{
-  padding-top: 25px;
-  display: flex;
-}
-/* КАРТОЧКИ ДОЛЖНЫ ПЕРЕБИРАТЬСЯ НА ДРУГУЮ СТРОЧКУ*/
-.card{
-  display: inline-block;
+.card-list-box {
+  width: 680px;
+  padding-top: 15px;
+  font-size: 0;
   margin: auto;
-  width: 180px;
-  height: 270px;
+}
+.card {
+  vertical-align: middle;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  width: 210px;
+  height: 350px;
   padding: 10px;
   background-color: rgba(0,0,0,0.8);
-  border-radius: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+.card-last {
+  margin-right: 0;
 }
 .card:hover{
-  border: 1px solid white;
+  box-shadow: 5px 5px 15px grey, -5px -5px 15px grey;
+  /* border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s; */
+}
+.card-icon {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+  float: right;
+  cursor: pointer;
+  border: 2px transparent solid;
+  border-radius: 20%;
+}
+.card-icon:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color .25s;
+}
+.card-icon:active {
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s;
 }
 .card-image{
   display: block;
@@ -130,6 +160,7 @@
   object-fit: cover;
 }
 .card-name{
+  font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   text-align: center;
   padding: 5px 0 10px 0;
@@ -138,21 +169,88 @@
   font-size: 14px;
   text-align: justify;
 }
-.info {
+#card-add:hover {
+  cursor: pointer;
+}
+/*#card-add:active {
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: border .25s;
+}*/
+#card-add .card-image {
+  object-fit: contain;
+}
+#card-add .edit-icon {
+  display: none;
+}
+#card-add .del-icon {
+  display: none;
+}
+.card-add-view {
+  width: auto;
+  display: contents;
+}
+.card-add-data {
+  display: none;
+  width: auto;
+}
+.card-add-data label {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.add-url, .add-name {
+  display: block;
+  margin-bottom: 15px;
+  color: black;
+  height: 30px;
+  width: 190px;
+}
+.add-text {
+  display: block;
+  margin-bottom: 30px;
+  color: black;
+  height: 90px;
+  width: 190px;
+}
+.add-submit {
+  display: block;
+  margin: auto;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  background-color: azure;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  content: 'Подтвердить';
+  cursor: pointer;
+}
+.add-submit:hover {
+  background-color: rgb(200, 200, 200);
+  transition: background-color .25s;
+  cursor: pointer;
+}
+.add-submit:active {
+  border-color: rgba(0, 0, 0, 0.8);
+  transition: border .25s;
+}
+.foo-bar {
   height: 40px;
   width: 100%;
   background-color: rgba(0,0,0,1);
   display: flex;
 }
-.info-list{
+.author-info-list{
   list-style: none;
   margin: auto;
   display: flex;
 }
-.info-list li{
+.author-info-list li{
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   margin: 0 20px 0 20px;
-  display: inline-block;
 }
 
